@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Иван Иванов",
+    "email": "ivan@mail.com",
+    "age": 25,
+    "created_at": "2025-11-14 07:43:04"
+  },
+  {
+    "id": 2,
+    "name": "Петр Петров",
+    "email": "petr@mail.com",
+    "age": 30,
+    "created_at": "2025-11-14 07:43:04"
+  },
+  {
+    "id": 3,
+    "name": "Мария Сидорова",
+    "email": "maria@mail.com",
+    "age": 28,
+    "created_at": "2025-11-14 07:43:04"
+  },
+  {
+    "id": 4,
+    "name": "Алексей Козлов",
+    "email": "alex@mail.com",
+    "age": 35,
+    "created_at": "2025-11-14 07:43:04"
+  }
+]

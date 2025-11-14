@@ -10,9 +10,6 @@ import json
 conn = sqlite3.connect('database.db')
 cursor = conn.cursor()
 
-# Включение поддержки внешних ключей
-cursor.execute("PRAGMA foreign_keys = ON")
-
 # Создание таблицы пользователей
 #cursor.execute('''
 #CREATE TABLE IF NOT EXISTS belka (
@@ -26,6 +23,7 @@ cursor.execute("PRAGMA foreign_keys = ON")
 #
 #conn.commit()
 
+#Импорт из csv
 
 def import_users_from_csv(filename):
     with open(filename, 'r', encoding='utf-8') as file:
@@ -37,8 +35,6 @@ def import_users_from_csv(filename):
             ''', (row['name'], row['email'], int(row['age'])))
     conn.commit()
 
-# Одиночная вставка
-#cursor.execute("INSERT INTO belka (name, email, age) VALUES (?, ?, ?) ", ('Иван Иванов', 'ivan@mail.com', 25))
 
 # Множественная вставка
 users_data = [
@@ -83,6 +79,8 @@ cursor.execute("SELECT * FROM belka")
 all_users = cursor.fetchall()
 print("Все пользователи:", all_users)
 
+
+#Экспорт данных в csv
 def export_users_to_csv(filename):
     cursor.execute("SELECT * FROM belka")
     users = cursor.fetchall()
@@ -97,5 +95,5 @@ def export_users_to_csv(filename):
 
 #export_to_json()
 
-import_from_json("users.json")
+#import_from_json('users.json')
 
